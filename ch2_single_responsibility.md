@@ -39,7 +39,6 @@ Enforce single responsibility everywhere
   - Isolate extra responsibilities in classes (or make Structs, temporarily)
 
 Final code
-
 ```ruby
 class Gear
   attr_reader :chainring, :cog, :wheel
