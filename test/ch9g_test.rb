@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require_relative './minitest_helper'
 require_relative '../lib/ch9g'
 
 module DiameterizableInterfaceTest

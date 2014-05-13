@@ -30,5 +30,4 @@ class Gear
   def changed
     observer.changed(chainring, cog)
   end
-
 end

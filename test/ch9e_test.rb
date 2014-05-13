@@ -1,6 +1,6 @@
 # Testing duck types/roles (p. 219)
 
-require 'minitest/autorun'
+require_relative './minitest_helper'
 require_relative '../lib/ch9e'
 
 module PreparerInterfaceTest

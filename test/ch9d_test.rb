@@ -1,6 +1,6 @@
 # Testing outgoing command messages w/ a MOCK observer (p.215)
 
-require 'minitest/autorun'
+require_relative './minitest_helper'
 require_relative '../lib/ch9d'
 
 class GearTest < MiniTest::Test
