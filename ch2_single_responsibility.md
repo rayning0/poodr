@@ -40,23 +40,6 @@ Enforce single responsibility everywhere
 
 Final code
 ```ruby
-class Gear
-  attr_reader :chainring, :cog, :wheel
-  def initialize(chainring, cog, wheel=nil)
-    @chainring = chainring
-    @cog       = cog
-    @wheel     = wheel
-  end
-
-  def ratio
-    chainring / cog.to_f
-  end
-
-  def gear_inches
-    ratio * wheel.diameter
-  end
-end
-
 class Wheel
   attr_reader :rim, :tire
 
@@ -74,6 +57,23 @@ class Wheel
   end
 end
 
+class Gear
+  attr_reader :chainring, :cog, :wheel
+  def initialize(chainring, cog, wheel=nil)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = Wheel  # Dependency for Wheel is INJECTED into Gear
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+end
+
 @wheel = Wheel.new(26, 1.5)
 puts @wheel.circumference
 # -> 91.106186954104
@@ -83,4 +83,16 @@ puts Gear.new(52, 11, @wheel).gear_inches
 
 puts Gear.new(52, 11).ratio
 # -> 4.72727272727273
+
+OR
+
+class Gear
+  attr_reader :chainring, :cog, :wheel
+  def initialize(args)
+    @chainring = args[:chainring]
+    @cog       = args[:cog]
+    @wheel     = args[:wheel]   # dependency for Wheel is INJECTED into Gear
+  end
+# ...
+end
 ```
