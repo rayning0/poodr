@@ -1,4 +1,4 @@
-# Testing duck types/roles (p. 219)
+# Testing duck types/roles/interfaces (p. 219)
 
 require 'spec_helper'
 require_relative '../lib/ch9e'

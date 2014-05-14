@@ -1,3 +1,5 @@
+# Using role/interface tests to validate doubles/mocks (p. 222)
+
 require 'spec_helper'
 require_relative '../lib/ch9g'
 

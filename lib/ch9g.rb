@@ -1,3 +1,5 @@
+# Using role/interface tests to validate doubles/mocks (p. 222)
+
 class Wheel
   attr_reader :rim, :tire
   def initialize(rim, tire)
@@ -16,6 +18,7 @@ class Gear
   def initialize(args)
     @chainring = args[:chainring]
     @cog       = args[:cog]
+    # dependency for Wheel is INJECTED into Gear
     @wheel     = args[:wheel]
   end
 

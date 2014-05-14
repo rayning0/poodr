@@ -5,6 +5,7 @@ class Gear
   def initialize(args)
     @chainring = args[:chainring]
     @cog       = args[:cog]
+    # dependency for Wheel is INJECTED into Gear
     @wheel     = args[:wheel]
     @observer  = args[:observer]
   end

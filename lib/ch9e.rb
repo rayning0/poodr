@@ -1,4 +1,4 @@
-# Testing duck types/roles (p. 219)
+# Testing duck types/roles/interfaces (p. 219)
 
 class Trip
   attr_reader :bicycles, :customers, :vehicle

@@ -27,8 +27,6 @@ rspec spec/ch9d_spec.rb (RSpec)
 ```
 These 2 tests are for a mock "observer" object, to see if Gear actually sends it a message to :change. For some reason, the group rake and rspec way of running tests cannot deal with this mock object, thinking "observer" is nil.
 
-However, testing just that 1 file works. If you have questions/comments, please say hi:
+However, testing just that 1 file will work. If you have questions/comments, please say hi:
 
-  - Raymond Gan
-  - rayning@gmail.com
-  - http://twitter.com/rgan0
+  - Raymond Gan | rayning@gmail.com | http://twitter.com/rgan0
